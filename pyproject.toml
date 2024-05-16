@@ -1,0 +1,41 @@
+[project]
+name = "boilerplate"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Christopher Costello", email = "christophercostello97@gmail.com"},
+]
+dependencies = []
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.2.2",
+    "mypy>=1.8.0",
+    "pytest>=8.0.1",
+    "pyupgrade>=3.15.2",
+    "pre-commit>=3.7.1",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+    "COM812",   # Checks for the absence of trailing commas. (incompatible with formatter)
+    "ISC001",   # Checks for implicitly concatenated strings on a single line. (incompatible with formatter)
+]
+line-length = 79  # PEP-8 compliance
+target-version = "py312"
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 72  # PEP-8 compliance
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
