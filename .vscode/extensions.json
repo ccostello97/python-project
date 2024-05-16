@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "njpwerner.autodocstring",
+        "redhat.vscode-yaml"
+    ],
+    "unwantedRecommendations": []
+}
