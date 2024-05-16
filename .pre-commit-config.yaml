@@ -1,4 +1,4 @@
-default_stages: [pre-commit]
+default_stages: [pre-push]
 
 repos:
   - repo: local
@@ -8,22 +8,22 @@ repos:
       name: format
       entry: make format
       language: system
-      files: [python]
+      types: [python]
 
     - id: lint
       name: lint
       entry: make lint
       language: system
-      files: [python]
+      types: [python]
 
     - id: type_check
       name: type_check
       entry: make type_check
       language: system
-      files: [python]
+      types: [python]
 
     - id: test
       name: test
       entry: make test
       language: system
-      files: [python]
+      types: [python]

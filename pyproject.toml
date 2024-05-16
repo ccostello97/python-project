@@ -5,7 +5,8 @@ description = "Default template for PDM package"
 authors = [
     {name = "Christopher Costello", email = "christophercostello97@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -18,9 +19,17 @@ dev = [
     "ruff>=0.2.2",
     "mypy>=1.8.0",
     "pytest>=8.0.1",
-    "pyupgrade>=3.15.2",
     "pre-commit>=3.7.1",
 ]
+
+[tool.pdm.scripts]
+format = "ruff format ."
+lint = "ruff check ."
+format_check = "ruff format --check ."
+lint_check = "ruff check --no-fix ."
+type_check = "mypy ."
+test = "pytest ."
+check = "pre-commit run --all-files"
 
 [tool.mypy]
 strict = true
