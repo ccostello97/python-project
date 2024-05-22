@@ -1,29 +1,32 @@
-default_stages: [pre-push]
-
 repos:
+
   - repo: local
     hooks:
 
-    - id: format
-      name: format
-      entry: make format
-      language: system
-      types: [python]
-
     - id: lint
-      name: lint
-      entry: make lint
+      name: Linter
+      entry: pdm lint
       language: system
       types: [python]
+      stages: [pre-push]
+
+    - id: format
+      name: Formatter
+      entry: pdm format
+      language: system
+      types: [python]
+      stages: [pre-push]
 
     - id: type_check
-      name: type_check
-      entry: make type_check
+      name: Typing
+      entry: pdm type_check
       language: system
       types: [python]
+      stages: [pre-push]
 
     - id: test
-      name: test
-      entry: make test
+      name: Tests
+      entry: pdm test
       language: system
       types: [python]
+      stages: [pre-push]
