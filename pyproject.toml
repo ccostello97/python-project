@@ -28,14 +28,15 @@ dev = [
 ]
 
 [tool.pdm.scripts]
-check = {composite = ["format", "lint", "test", "type_check"]}
-docs = "mkdocs serve"
-format_check = "ruff format --check ."
-format = "ruff format ."
 lint = "ruff check ."
+format = "ruff format ."
 lint_check = "ruff check --no-fix ."
-test = "pytest --cov=src tests"
+format_check = "ruff format --check ."
 type_check = "mypy ."
+test = "pytest --cov=src tests"
+docs = "mkdocs serve"
+check = {composite = ["format", "lint", "test", "type_check"]}
+
 
 [tool.pdm.version]
 source = "scm"
