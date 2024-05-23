@@ -1,6 +1,5 @@
 [project]
 name = "python-project"
-version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Christopher Costello", email = "christophercostello97@gmail.com"},
@@ -9,6 +8,7 @@ dependencies = []
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
+dynamic = ["version"]
 
 [tool.mypy]
 strict = true
@@ -36,7 +36,6 @@ type_check = "mypy ."
 test = "pytest --cov=src tests"
 docs = "mkdocs serve"
 check = {composite = ["format", "lint", "test", "type_check"]}
-
 
 [tool.pdm.version]
 source = "scm"
