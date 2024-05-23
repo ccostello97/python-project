@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:2d4febfef50ec366310d9f05f0fd4ebb70af513330a9aeea5a1d97d83552c9db"
+content_hash = "sha256:2f788a61b122d5a7e2fde5a80f61c4c6ee7c5d0ca42579c1c67ad1f03062374f"
 
 [[package]]
 name = "babel"
@@ -644,6 +644,31 @@ groups = ["dev"]
 files = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
+]
+
+[[package]]
+name = "toml-sort"
+version = "0.23.1"
+requires_python = ">=3.7,<4.0"
+summary = "Toml sorting library"
+groups = ["dev"]
+dependencies = [
+    "tomlkit>=0.11.2",
+]
+files = [
+    {file = "toml_sort-0.23.1-py3-none-any.whl", hash = "sha256:69ae60de9c4d67478533697eb4119092e2b30ddffe5ca09bbad3912905c935a0"},
+    {file = "toml_sort-0.23.1.tar.gz", hash = "sha256:833728c48b0f8d509aecd9ae8347768ca3a9332977b32c9fd2002932f0eb9c90"},
+]
+
+[[package]]
+name = "tomlkit"
+version = "0.12.5"
+requires_python = ">=3.7"
+summary = "Style preserving TOML library"
+groups = ["dev"]
+files = [
+    {file = "tomlkit-0.12.5-py3-none-any.whl", hash = "sha256:af914f5a9c59ed9d0762c7b64d3b5d5df007448eb9cd2edc8a46b1eafead172f"},
+    {file = "tomlkit-0.12.5.tar.gz", hash = "sha256:eef34fba39834d4d6b73c9ba7f3e4d1c417a4e56f89a7e96e090dd0d24b8fb3c"},
 ]
 
 [[package]]
