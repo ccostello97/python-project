@@ -41,6 +41,7 @@
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
+    "ruff.configuration": "${workspaceFolder}/pyproject.toml",
     "ruff.lint.args": [
         "--config=pyproject.toml",
         "--ignore=D,F401,PLR2004,S101,SLF001,T201"
