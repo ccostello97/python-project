@@ -50,6 +50,7 @@ lint.ignore = [
 lint.select = ["ALL"]
 lint.pycodestyle.max-doc-length = 72
 lint.pydocstyle.convention = "pep257"
+src = ["src"]
 
 [[tool.mypy.overrides]]
 module = ""
