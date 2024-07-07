@@ -3,16 +3,14 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.rulers": [
             79
-        ]
+        ],
     },
     "autoDocstring.docstringFormat": "pep257",
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
-    "editor.indentSize": 4,
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
     "files.autoSave": "afterDelay",
     "files.exclude": {
         "**/*.egg-info": true,

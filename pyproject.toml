@@ -43,13 +43,15 @@ source = "scm"
 [tool.ruff]
 line-length = 79
 target-version = "py312"
+lint.flake8-bugbear.extend-immutable-calls = ["fastapi.Depends", "fastapi.Query"]
 lint.ignore = [
-  "COM812",  # Checks for the absence of trailing commas. (incompatible with formatter)
-  "ISC001"   # Checks for implicitly concatenated strings on a single line. (incompatible with formatter)
+    "COM812",  # Checks for the absence of trailing commas. (incompatible with formatter)
+    "ISC001"   # Checks for implicitly concatenated strings on a single line. (incompatible with formatter)
 ]
 lint.select = ["ALL"]
 lint.pycodestyle.max-doc-length = 72
 lint.pydocstyle.convention = "pep257"
+lint.pylint.max-args = 10
 src = ["src"]
 
 [tool.ruff.lint.per-file-ignores]
