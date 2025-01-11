@@ -1,0 +1,60 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.rulers": [
+            79
+        ],
+    },
+    "autoDocstring.docstringFormat": "pep257",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.detectIndentation": false,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/*.egg-info": true,
+        "**/.coverage": true,
+        "**/.mypy_cache": true,
+        "**/.pdm-python": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/target": true
+    },
+    "mypy-type-checker.args": [
+        "--enable-incomplete-feature=NewGenericSyntax"
+    ],
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.fixAll": [
+        "source.unusedImports"
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+    "ruff.lint.args": [
+        "--config=pyproject.toml",
+        "--ignore=D,F401,PLR2004,S101,SLF001,T201"
+    ],
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    }
+}

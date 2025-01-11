@@ -1,0 +1,26 @@
+[project]
+name = "python-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.10",
+    "mypy>=1.14.1",
+    "pytest>=8.3.4",
+    "ruff>=0.8.6",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+lint.ignore = ["COM812", "ISC001"]
+line-length = 79
+lint.pycodestyle.max-doc-length = 72
+lint.pydocstyle.convention = "pep257"
+lint.select = ["ALL"]
+target-version = "py313"
